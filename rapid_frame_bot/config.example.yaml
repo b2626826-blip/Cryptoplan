@@ -1,0 +1,35 @@
+# config.example.yaml — 複製成 config.yaml 後填寫。金鑰不放這裡，見 secrets/README.md。
+testnet: true            # true = 紙上模擬（不真下單）
+
+logging:
+  level: INFO
+  file: bot.log
+
+email:
+  smtp_host: smtp.gmail.com
+  smtp_port: 465
+  sender: you@example.com
+  password: ""           # 應用程式密碼；建議改用環境變數注入
+  recipient: you@example.com
+
+exchanges:
+  bitunix:
+    enabled: true
+    symbols: [BTCUSDT, ETHUSDT]
+    major_leverage: 10
+    altcoin_leverage: 5
+    major_timeframes: [1h, 3h]
+    altcoin_timeframes: [1d]
+    max_concurrent_positions: 3
+    risk_per_trade: 0.02
+    qty_step: 0.001
+  bingx:
+    enabled: false        # 要跑再開
+    symbols: [BTC/USDT:USDT]
+    major_leverage: 10
+    altcoin_leverage: 5
+    major_timeframes: [1h]
+    altcoin_timeframes: [1d]
+    max_concurrent_positions: 2
+    risk_per_trade: 0.02
+    qty_step: 0.0001

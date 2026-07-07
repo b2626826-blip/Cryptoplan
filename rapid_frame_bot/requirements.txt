@@ -1,0 +1,5 @@
+aiohttp>=3.9.0
+websockets>=12.0
+PyYAML>=6.0
+loguru>=0.7.0
+ccxt>=4.2.0

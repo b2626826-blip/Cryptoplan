@@ -1,0 +1,24 @@
+API_KEY.txt
+config.yaml
+__pycache__/
+*.pyc
+.pytest_cache/
+logs/
+# 各交易所金鑰檔（env 優先；檔案回退）— 不進 git，但保留 README 說明
+rapid_frame_bot/secrets/*
+!rapid_frame_bot/secrets/README.md
+
+# 🔒 專有策略（不公開；本機保留運行）— 保留 strategy/README.md 佔位說明
+rapid_frame_bot/strategy/detector.py
+rapid_frame_bot/strategy/fibonacci.py
+rapid_frame_bot/strategy/state_machine.py
+rapid_frame_bot/strategy/candle_builder.py
+rapid_frame_bot/tests/unit/test_detector.py
+rapid_frame_bot/tests/unit/test_fibonacci.py
+rapid_frame_bot/tests/unit/test_candle_builder.py
+rapid_frame_bot/tests/integration/test_state_machine.py
+rapid_frame_bot/tests/integration/test_paper_e2e.py
+
+# 內部開發計畫／規格（含逐字策略與原始碼）— 不公開
+docs/superpowers/
+rapid_frame_bot/docs/superpowers/
